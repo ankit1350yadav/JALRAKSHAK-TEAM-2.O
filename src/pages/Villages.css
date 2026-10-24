@@ -1,0 +1,426 @@
+/* Villages.css — Styles for the Village Details View and Catchment Directory */
+
+.village-page {
+  padding-bottom: 40px;
+}
+
+.village-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.village-page__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 4px 0;
+}
+
+.village-page__subtitle {
+  font-size: 13px;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* ── Quick Village Selector Bar ─────────────────────────────────────────── */
+.village-selector-bar {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.village-selector-bar__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.village-selector-bar__search {
+  padding: 7px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  width: 260px;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.village-selector-bar__search:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.village-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.village-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.village-pill-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.village-pill-btn--active {
+  background: var(--color-accent);
+  color: #ffffff !important;
+  border-color: var(--color-accent);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Selected Village Details Master Card ───────────────────────────────── */
+.village-details-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.village-details-card__hero {
+  padding: 16px 20px;
+  background: linear-gradient(to right, #f8fafc, #f1f5f9);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.village-details-card__identity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.village-details-card__name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.village-details-card__district {
+  font-size: 13px;
+  color: #475569;
+}
+
+.village-details-card__quick-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.village-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.village-meta-item strong {
+  color: #1e293b;
+}
+
+.village-details-card__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── Sections inside Village Details ────────────────────────────────────── */
+.village-section {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.village-section:last-child {
+  border-bottom: none;
+}
+
+.village-section__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #475569;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.village-section__badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6b21a8;
+  background: #f3e8ff;
+  border: 1px solid #d8b4fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* ── Current Conditions 5-Grid ─────────────────────────────────────────── */
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+
+.condition-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.condition-card:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.condition-card__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.condition-card__value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.condition-card__sub {
+  font-size: 10.5px;
+  color: #94a3b8;
+}
+
+/* ── Risk Scores 4-Grid ─────────────────────────────────────────────────── */
+.risk-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.risk-score-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.risk-score-card--water { border-top: 3px solid #d97706; }
+.risk-score-card--flood { border-top: 3px solid #0284c7; }
+.risk-score-card--landslide { border-top: 3px solid #ea580c; }
+.risk-score-card--overall { border-top: 3px solid #dc2626; }
+
+.risk-score-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.risk-score-card__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.risk-score-card__score-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.risk-score-card__score {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+.risk-score-card__denom {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ── Hazard Intelligence / Provenance Info ──────────────────────────────── */
+.intelligence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.intel-block {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.intel-block__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+
+.intel-block__value {
+  font-size: 13px;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.intel-factors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.intel-factor-item {
+  font-size: 12px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.intel-factor-bullet {
+  color: #ea580c;
+  font-size: 14px;
+}
+
+/* ── Water Sources & Sensor Nodes Detailed Lists ────────────────────────── */
+.entity-details-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.entity-subcard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.entity-subcard__header {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entity-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.entity-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.entity-item__title {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.entity-item__sub {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.entity-item__meta {
+  text-align: right;
+  font-size: 11.5px;
+}
+
+/* ── Historical Trend Chart Card ────────────────────────────────────────── */
+.trend-chart-card {
+  margin-top: 4px;
+}
+
+.trend-chart-wrapper {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ── Data Unavailable Badge / Label ─────────────────────────────────────── */
+.data-unavailable {
+  color: #94a3b8;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+}

@@ -1,0 +1,71 @@
+.header {
+  height: var(--header-height);
+  background: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  gap: 16px;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.header__logo {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.header__titles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.header__name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.header__subtitle {
+  font-size: 11px;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header__badges {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.header__badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.header__badge--proto {
+  background: rgba(255,255,255,0.15);
+}
+
+.header__badge--demo {
+  background: rgba(255,200,0,0.25);
+  border-color: rgba(255,200,0,0.5);
+}

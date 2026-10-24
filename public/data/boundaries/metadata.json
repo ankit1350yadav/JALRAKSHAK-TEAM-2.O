@@ -1,0 +1,42 @@
+{
+  "dataset_name": "JalRakshak 2.0 GIS Authoritative Boundaries Layer",
+  "version": "2.1.0",
+  "sources": [
+    {
+      "name": "Natural Earth Vector Cultural Boundaries (v5.1.1)",
+      "url": "https://www.naturalearthdata.com/",
+      "license": "Public Domain",
+      "citation": "Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com"
+    },
+    {
+      "name": "Jammu and Kashmir Reorganisation Act, 2019",
+      "reference": "Act No. 34 of 2019, Parliament of India",
+      "description": "Bifurcation of former State into Union Territory of Jammu & Kashmir and Union Territory of Ladakh"
+    },
+    {
+      "name": "United Nations Geospatial Information Section Cartographic Guidelines",
+      "standard": "ST/GEN/FB/1/Rev.1",
+      "description": "Cartographic practice regarding depiction of lines of control and disputed boundaries"
+    }
+  ],
+  "layers": {
+    "regional": {
+      "file": "/data/boundaries/jk_ladakh_regional.geojson",
+      "description": "Detailed boundaries for UT of Jammu and Kashmir, UT of Ladakh, Line of Control (LoC), Line of Actual Control (LAC), and surrounding disputed zones",
+      "cartographic_treatment": {
+        "UT-JK": "Solid blue stroke with translucent fill; recognized Indian administrative territory post-2019",
+        "UT-LA": "Solid purple stroke with translucent fill; recognized Indian administrative territory post-2019",
+        "LINE-LOC": "Prominent dashed red-amber line (8px dash, 6px gap); 1972 Simla Agreement Line of Control",
+        "LINE-LAC": "Prominent dashed orange line (6px dash, 6px gap); Line of Actual Control separating Ladakh from Aksai Chin",
+        "DISP-PAK-KASHMIR": "Muted gray dashed outline with faint fill; Pakistan-administered Kashmir (Azad Kashmir and Gilgit-Baltistan), excluded from ordinary Indian administrative territory",
+        "DISP-CHN-AKSAI": "Muted slate dashed outline with faint fill; China-administered Aksai Chin, excluded from ordinary Indian administrative territory",
+        "DISP-SIACHEN": "Demarcated glacial zone north of NJ9842 along the Actual Ground Position Line (AGPL)"
+      }
+    },
+    "national_overview": {
+      "file": "/data/boundaries/india_overview.geojson",
+      "description": "National overview showing all 36 States and Union Territories with J&K and Ladakh separately identified and disputed zones excluded from ordinary state fills"
+    }
+  },
+  "disclaimer": "Cartographic Disclaimer: Administrative boundaries, designations, and cartographic representation of the Line of Control (LoC), Line of Actual Control (LAC), and associated zones are provided for spatial orientation and hydrological modeling. They do not imply official legal endorsement, sovereign determination, or border demarcation by the system or its contributors. Dotted and dashed lines represent approximate de facto lines of control."
+}

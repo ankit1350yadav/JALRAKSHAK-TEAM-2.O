@@ -1,0 +1,7 @@
+{
+  "name": "Remix JALRALSHAK-2.0",
+  "description": "Imported from GitHub: ankit1350yadav/JALRALSHAK-2.0",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,29 @@
+/* App.css — top-level layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__body {
+  display: flex;
+  flex: 1;
+}
+
+.app__main {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__footer {
+  margin-top: auto;
+  padding: 12px 28px;
+  border-top: 1px solid var(--color-border);
+  font-size: 12px;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  text-align: center;
+  line-height: 1.6;
+}

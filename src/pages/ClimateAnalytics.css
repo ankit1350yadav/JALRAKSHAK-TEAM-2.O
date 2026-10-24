@@ -1,0 +1,135 @@
+/* ClimateAnalytics.css — styles specific to the Climate Analytics page */
+.climate-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.climate-filter-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.climate-select {
+  padding: 7px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.climate-select:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.climate-clear-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  background: transparent;
+  color: var(--color-muted);
+}
+
+.climate-clear-btn:hover {
+  background: var(--color-bg);
+}
+
+.climate-count-badge {
+  font-size: 11px;
+  color: var(--color-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+/* ── Tabs ── */
+.climate-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0;
+}
+
+.climate-tab {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  color: var(--color-muted);
+  border-radius: 4px 4px 0 0;
+  transition: color 0.15s, border-bottom-color 0.15s;
+}
+
+.climate-tab:hover {
+  color: var(--color-text);
+}
+
+.climate-tab--active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ── Charts grid ── */
+.climate-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+/* ── Chart card ── */
+.chart-card {
+  margin-bottom: 0;
+}
+
+.chart-card__note {
+  font-size: 11.5px;
+  color: var(--color-muted);
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+.chart-card__body {
+  margin-top: 8px;
+}
+
+/* ── Empty chart state ── */
+.chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--color-muted);
+  border: 1px dashed var(--color-border);
+  border-radius: 8px;
+}
+
+/* ── Season dot ── */
+.season-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}

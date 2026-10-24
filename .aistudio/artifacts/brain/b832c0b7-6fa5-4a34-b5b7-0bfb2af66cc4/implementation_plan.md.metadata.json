@@ -1,0 +1,6 @@
+{
+  "summary":  "Comprehensive architectural blueprint and implementation plan for upgrading JalRakshak 1.0 to JalRakshak 2.0 Multi-Hazard Mountain Risk Intelligence Platform. Specifies all 20 required system components (inputs, outputs, database tables, API endpoints, frontend components, ML dependencies, and module dependencies), multi-hazard synthesis equations, interactive telemetry simulator, switchable GIS layers, and a phased execution roadmap.",
+  "updatedAt":  "2026-10-23T03:37:24.844729580Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
